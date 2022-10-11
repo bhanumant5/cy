@@ -1,0 +1,12 @@
+{
+  "baseUrl": null,
+  "reporter": "mochawesome",
+  "defaultCommandTimeout": 4000,
+  "chromeWebSecurity": true,
+  "video": false,
+  "screenshotOnRunFailure": false,
+  "integrationFolder": "cypress/integration/DAY_1",
+  "includeShadowDom": true,
+  "env": null,
+  "projectId": "pi3bay"
+}
