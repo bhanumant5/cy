@@ -1,0 +1,857 @@
+// ///<reference types="cypress"/>
+
+
+
+//importing data from model file
+
+
+// import cypress = require("cypress");
+
+
+//Set default browser
+
+// describe("Test", { browser: "chrome" }, () => {
+//   beforeEach(function () {
+//     Cypress.Cookies.defaults({
+//       preserve: ["cookiesName"],
+//     });
+//   });
+//   it.only("Test", () => {
+//     // Cypress.Screenshot.defaults(){
+//     //     Screenshot:
+//     // }
+//     if (Cypress.isBrowser("chrome")) {
+//       cy.visit(Cypress.env("url"));
+//       cy.get("element", { timeout: 20000 }, { force: true }).should(
+//         "be.visible"
+//       );
+
+
+//Dropdown
+// Cypress.Commands.add("selectValue", (valuetoSelect) => {
+
+//     cy.get(locators.selectDropdown).click()
+//     .then(() => {
+//         cy.get(locators.selectDropdown).type(valuetoSelect).wait(500)
+//             .get(locators.selectoption).each(($els) => {
+               
+//                 if ($els.text().trim() == "valuetoSelect") {
+//                     cy.wait(500);
+//                     cy.wrap($els).click();
+//                 }
+//             })
+//     })
+// })
+      
+
+// Preserve Cookies in Cypress
+//      describe('my test', () => {
+
+//     beforeEach(() => {
+    
+//     Cypress.Cookies.preserveOnce('session_id', 'remember_token')
+    
+//     });
+
+
+
+//       cy.getCookie("key");=====get cookies 
+
+//       cy.getCookies();        ======get all cookies
+
+//       cy.setCookie();
+
+
+//       cy.clearCookie('');=========clear specific cookies
+
+
+//cy.clearCookie(); ==========for clearing all cookies
+
+
+// Element visible or not
+//       cy.get().should("be.visible");
+
+
+// validation of url
+//       cy.url().should("include", "");
+
+
+//wait till api request with alias
+//       cy.intercept({
+//         method: "",
+//         url: "",
+//         body: "",
+//       }).as("name");
+     //  cy/get('@name')
+
+
+
+//wait for element
+//       cy.wait(20000);
+//       cy.get().each(function (el) {
+//         const t = el.text();
+//         if (t.includes("elment")) {
+//         }
+//       });
+//       cy.get().then(function (el) {
+//         const url = el.prop("href");
+//         cy.log(url);
+//       });
+//       cy.get().invoke("removeAttr", "target").click();
+//       cy.url().should("include", "");
+
+
+
+
+// browser navigation
+//       cy.go(-1);
+//       cy.go(1);
+//       cy.go("back");
+//       cy.go("forward");
+//     }
+
+
+
+
+
+//checkbox
+//     cy.get().find("").check().should("be.checked").and("be.visible");
+//   });
+
+
+//find text
+//   cy.get().each(function (el, index) {
+//     const el = el.text();
+//     if (el.includes("") == "") {
+//       cy.get();
+//       expect().to.eq();
+//     }
+
+
+
+
+//     //headless mode run
+//     //cypress run --headless --browser chrome
+//     cy.pause()
+//     cy.debug()
+
+
+
+// /// read data text
+
+// cy.get('#customers').get('tbody tr td').each(($ele)=>{
+
+//     cy.log($ele.text());
+    
+//     })
+
+
+
+
+//     //second way
+//     cy.get('#customers').then(($ele)=>{
+
+//         cy.log($ele.text()); //logs the text
+        
+//         }) 
+
+
+
+
+
+
+
+//     // use of  js Promise in cypress
+    
+// cy.visit('https://www.google.com')
+
+// cy.get('input[name="q"]').then(($ele)=>{
+
+// $ele.get(0).value="Something"
+
+// })
+
+
+
+
+// //Contais use
+// cy.contains('Hello')
+
+// //This returns the first matching element which is
+
+// // having text hello
+
+// cy.get('.button').contains('Clickme')
+//   });
+
+
+
+//   //Cli use
+// //   npm cypress run - - spec=”myspec.ts”
+
+
+
+
+// // mouseAction
+// cy.get('input[name="btnK"]').dblclick();
+// cy.get('body').rightclick();
+cy.get().click()
+
+
+
+
+// //enviroment variable
+// {
+//     env{
+//         url:''
+//     }
+// }
+
+// cy.visit(Cypress.env('key'));
+
+
+// ///run
+// cypress run --env "Key"="Value"
+
+
+
+// //baseurl
+// cypress.json{
+//     "baseurl":"===="
+// }
+
+
+
+
+// baseurl run through cli
+// npx cypress run --config baseUrl="https://www.staging-website.com/"
+
+
+
+
+// Cypress.Commands.add("login", (username, password) => {
+
+//     //adding a new command named login
+  
+//     cy.get("#username").type(username);
+  
+//     cy.get("#password").type(password);
+   
+//     cy.get("#login").click();
+  
+
+
+
+
+//for iframw custom command
+
+
+//     cy.visit("http://mysite.com/login.html");
+
+//        cy.login('Myusername','My Passowrd');
+//   });
+
+
+
+
+//Handling New Tab 
+
+// cy.visit()
+// cy.get('').then(function(el){
+//     const url = el.prop('href')
+//     cy.visit(url)
+//     cy.go(-1)
+// })
+// 
+// cy.get().then(function(frame){
+//     const body =frame.contents().find('body')
+//     cy.wrap(body).find('').click()
+// })
+
+
+
+
+// cy.get().type('hello {shift}{alt}')
+//   cy.get(‘login’).type('{shift}{alt}hello'));
+//cy.get().type({shift}{alt} hello)
+
+// });
+
+
+
+
+
+
+// cypress file upload plug in installation command
+// npm install --save-dev cypress-file-upload=========type commnad in node
+// import 'cypress-file-upload'; ===========support/command.js===type this text
+// add file in fixture folder
+
+
+// cypress iframe plug in installation command
+// npm install -D cypress-iframe
+// import 'cypress-iframe'; ===========support/command.js===type this text
+
+
+
+// headless mode run command
+// cypress run --headless spec="file.spec.js"
+
+
+
+
+
+
+
+
+
+
+// cypress installation
+
+// npm init ===========>for package.json
+// npm install ========> all dependencies is there node module
+// npm install cypress =========> for installation of cypress ,
+// npm install npx ========>for path management 
+// npx cypress open    =======open cypress
+
+
+
+// commnand.js============ custom command
+
+// cypress.json=====overide features.....change the configration setting of cypress 
+// test runner===settings=== configration ===see all settings are there
+
+// {
+//     "default Command timeout":3000
+// }
+
+// in commnad line ===== cypress run --config "default Command timeout":3000
+
+
+
+
+
+// timeout ========== 4sec
+// cy.wait(2000)===time in sec
+
+
+
+// cy.wrap() ===== cypress method convert jquey element into js
+
+// cy.invoke()====jquery method handling new tab    invoke(removeattr, taget)
+
+// cy.check()=========radio button and checkbox
+
+// cy.select()============dropdown  //if el.text()=='samsung' condition and eq()
+
+// cy.url().should(includes , " ")=========== url verification aseertion 
+// cy.url().should('contain', ===)
+
+// cy.dblclick()===== doubleclick
+
+// .trigger=====handling mouse evenet and drop and drag===={which:2}, {which:2}, {which:3}
+
+
+
+
+// cypress custom command=========
+
+// Cypress.Commands.add('login', (Username, password) => { 
+//     cy.visit('https://opensource-demo.orangehrmlive.com/')
+//         cy.get('#txtUsername').type(Username)
+//         cy.get('#txtPassword').type(password)
+//         cy.get('#btnLogin').click()
+// })
+
+
+
+
+// cypress uncaugt text==============>
+
+// cy.on('uncaught:exception', (err, runnable) => {
+//     expect(err.message).to.include('of undefined')
+//       done()
+//       return false
+//     });
+
+
+
+
+//     cy.intecept()========wait for getting response===instaed of putting hardcote time we use cy.intercepet
+
+// describe (' verify intercept ', function(){
+//     it(' interceppt', function(){
+//         cy.intercept({
+//             method:'GET',
+//             url:'https://jsonplaceholder.cypress.io/comments/1'
+//         }).as('getComment')
+//         cy.visit('https://example.cypress.io/commands/network-requests')
+//         cy.contains('Get Comment').click()
+//         cy.wait('@getComment')
+//         cy.get('.network-comment').should('be.visible')
+//         cy.url().should('contain', 'network-requests')
+//     })
+  
+
+//   cy.stub() =====for mocking the data
+   
+
+
+//    for  Api testing  ======>
+//     it('test2', function(){
+//         cy.request({
+//             method:'GET',
+//             url:'https://reqres.in/api/users?page=2',
+
+//         }).then(function(res){
+//             cy.log(res)
+//             expect(res.status).to.eqls(200)
+//         })
+//     })
+
+//     .as === alias 
+
+
+    
+
+
+//     cypress timeout Parameter 
+
+
+
+
+// dom intraction command========> .click,,, .dblclick,,,.rightclick,,,.type,,,.clear
+
+
+
+// package.json====== all dependenfies is there 
+
+// for xpath installation============== npm install cypress -xpath
+
+
+
+
+
+// keyPress in cypress === like enter shift, alt , ctrol  ====>
+//  cy.get(''login).type("{shift}{alt}{enter} hello")
+
+
+// handling shadow dom====hiddenn element in dom
+//  shadow dom attached to the shadow tress ... which start with shadow root
+//  cy.get(.shadow-host).shadow().find(shadow-button).click()
+
+
+
+//  cy.exec() === to run system Commands
+//  cy.exec(npm run build)
+
+
+
+
+
+// handling child window=====>
+
+
+// by removing target Attribute 
+
+// by useng jquery method
+// cy.visit()
+// cy.get().then(function(el){
+//     let url =el.prop()
+//     cy.visit(url)
+// }
+
+
+
+
+// Bdd Framework ======== feature file " behaviesr Driven Development " ===create test case in simple language
+// non technical team understand whats going on project 
+// lan -"Gerkin"
+
+
+// Stubbbing ====> to mock th data
+
+
+
+// api Request  get ==retrive the data==201
+// Get ===Retrive User Data
+//            post== create user data==
+//            put==update user data==
+//            delet==delet data==
+
+
+
+
+// 1)write array of 1 to 5 numbers and perform addition of all values,after that perform addition of only even numbers from this array.
+// ==>
+// let arr=[1,2,3,4,5]
+// let sum=0
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]%2==0){
+//           sum=sum+arr[i]
+//     }
+  
+// }
+// console.log(sum)
+
+
+// let arr=[1, 2,3, 45, 6]
+
+// let sum = 0
+// for(let i= 0; i<arr.length; i++){
+//     if(arr[i]%2==0){
+//         sum = sum+arr[i]
+//     }
+// } 
+
+
+
+// 2)If webelement is not typeable, what u can do
+// =>cy.get('#text').type('test',{force:true})
+
+
+
+// 3)There is dropdown and no select value. How can you click on any drop down value without using if
+// =>cy.get('#lilist').eq(1).click()
+
+
+
+
+// 4)How to add custom commands how to call that custom command in test case
+// =>create custom command command.js file located in support folder
+//     interviewer--> how to write command show me example
+//    => Cypress.commands.add('commandName',function(name){
+//         cy.get('textbox').type(name)
+//         })
+
+
+// interviewer-->how you can call this command in testcase
+// =>cy.commandName()
+
+
+
+
+// cypress.command.add('login', function('username', 'pass'){
+//     cy.visit(''url)
+//     cy.get('xyz').type(username)
+//     cy.get().type(pass)
+//     cy.get().click()
+// })
+
+
+
+// 5)How to retrieve data from fixtures file and use it globally 
+// =>suppose my data in fixture file is array and contain property firstName in each object
+// import data from '../../fixture/contact.json'
+// data.forEach(function(el,index){
+// it(`TC ${index} fixture`,function(){
+// cy.get('#textbox').type(el.firstName)
+// })
+
+
+
+
+// 6)How to wait for particular element to load
+// ==>cy.get('#textbox',{timeout:8000}).type('sampleText')
+
+
+
+// 7)How to check element is visible or not
+// =>cy.get('#element).should('be.visible')
+
+
+// 8)how .then block work how you return particualr value from then block
+// ==>suppose we are testing API
+// cy.request({
+// method:"GET",
+// url:'http://xyz.com'
+// }).then(function(res){
+//     let id=res.body.data.id
+// return id
+// }).then(function(id){
+// expect(id).to.eql('01')
+// })
+
+
+
+// 9)how you read text of particlar element and assert using .then 
+// =>cy.get('#textbox').invoke('text').then(function(txt){
+// expect(txt).to.eql('ankit')
+// })
+
+
+
+// 10)How u handle exceptions in cypress 
+// =>Suppose for exapmple i have to  handle 
+// Cypress.on(Cypress.on('uncaught:exception', function(err, runnable){
+// return false
+// })
+
+
+
+
+// 11)how many types of alerts in javascript how you manage alerts in cypress write code to manage basic (window:alert)
+// =>there are 3 types of alert in js 
+// 1.window alert
+// 2.confirm
+// 3.prompt
+
+
+// we can use listner of window alert
+// cy.on('window:alert',function(str){
+//  expect(str).eql('i am js alert')
+// })
+// cy.visit('http://xyz.com')
+// cy.get('#button').click()
+
+
+
+// 12)write a program for api (get method ) for sample xyz url
+// =>cy.request({
+// method:"GET",
+// url:'http://xyz.com'
+// }).then(function(res){
+//     let id=res.body.data.id
+// return id
+// }).then(function(id){
+// expect(id).to.eql('01')
+// })
+
+
+
+// 13)open amazon search for mobile .check on check box having mobile brand('samsun') using text .
+// ==>there are multiple check box so we can select class unique for all checkbox
+// cy.get('#liMobileBrand').each(function(el){
+// if(el.text().includes('Samsung')){
+// if(el).find('#checkbox).check().
+// })
+
+
+
+// Write object in js and make instance and r etrieve value
+
+// let person ={
+//     fn:'hanumnat,
+//     ln:'bhojane'
+//     }
+
+//  person.firstName
+
+
+// How to retrieve value in cypress and use it in whole spec file
+
+
+
+
+// How u handle exceptions in cypress 
+
+
+
+
+// If webelement is not typeable, what u can do
+
+// cy.get({force:true})
+
+
+
+// There is email, ur name and ur number. How can you retrieve and use it in whole spec file in cypress 
+
+
+
+
+
+// There is dropdown and no select value. How can you click on any drop down value without using if
+
+
+// by using eq method
+
+// How to add custom commands
+
+
+// cypress.command.add(login, function(username, pass){
+//     cy.visit()
+// })
+
+
+// cy.login()
+
+
+
+// How to retrieve data from fixtures file and use it globally 
+
+import obj from '../../cypress/intecept'
+
+
+
+
+// Write a map and retrieve values by creating instances
+
+
+
+
+
+// How to automate calendar
+
+
+
+// it('verify functionality of Text box',function(){
+//         cy.visit('https://www.webdriveruniversity.com/Contact-Us/contactus.html')
+//        cy.get('input[name="first_name"]').type('my {name} is {Ankit}',{parseSpecialCharSequences:false})
+//     })
+
+
+
+
+
+
+// cy.task()===== cy.log() we cant use when u r running test on cli and console,log()also cannot use directly so in cypress ata that time we use cy.task()
+
+
+
+
+
+
+
+// cy.get('').type("i am {hanumant}", {parseSpecialCharsSequesnces:false})
+
+
+
+// let path=abc.jpeg
+// cy.visit()
+// cy.get('element').attachfile(path).should('be.visible')
+
+
+
+// cy.get().each(fub
+
+
+// npx cypress run
+
+
+// npm install --save--dev cypress-file-upload
+
+// npm install-D cypress -iframe
+
+
+// Command.Cypress.add(login, function('username', 'passward'){
+//   cy.visit
+// )
+
+
+// cy.get().eq().each(function(el){
+// cy.log()
+// cy.wrap(el).invoke(''text).
+
+
+
+// cy.get().type('{hanumant}', {parseSpecialCharsSequences:false'})
+
+
+
+// login.feature
+
+// Feature : Login Feature
+  
+// Scenario : Login with Valid Credential
+// Given Visit Page
+// And  Fill The Usenamer
+// And Fill The Passward
+// When Click  On The Button
+// Then Validate the Dashboard
+
+
+
+// // login.js
+// import {Given , And , And , When, Then} from 'cypress-cucumber-processor/steps'
+
+// Given()
+
+
+
+// {parseSpecialCharSequence:false}
+
+
+
+
+
+
+// login.js
+
+// class PageLogin{
+//    Static PageLoad(){
+//   cy.visit()
+// cy.get()
+// }
+
+
+// }
+
+
+
+// login.js
+
+// Given('test', function(el)=>{
+// Pageload()
+// )
+
+
+
+
+// cy.intercept({
+//           method:
+//            url:
+// }).as('GetElement')
+
+// cy.visit()
+// cy.get().click()
+// cy.wait('@GetElement')
+
+
+// cy.on('window:alert', (str)=>{
+// expect(str).to.equal()
+// })
+
+
+// cy.get('#id').invoke(text).then(function(text)=>{
+// expect(text).to
+// })
+
+// }
+
+
+
+
+STEP 1 INSTALLATION
+
+npm i --save cypress @shelex/cypress-allure-plugin allure-commandline
+
+STEP 2 CONFIGURATION
+a. In cypress/plugin/index.js
+
+/// <reference types="@shelex/cypress-allure-plugin" />
+
+const allureWriter = require("@shelex/cypress-allure-plugin/writer");
+
+module.exports = (on, config) => {
+  allureWriter(on, config);
+  return config;
+};
+
+b. In cypress/support/index.js
+
+import '@shelex/cypress-allure-plugin';
+
+
+STEP 3 Add Terminal Commands inside scripts object available into package.json file
+
+"scripts": {
+    "cy:run": "cypress run --env allure=true",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:clear": "if exist allure-results rmdir /q /s allure-results && if exist allure-report rmdir /q /s allure-report && if exist cypress\\screenshots rmdir /q /s cypress\\screenshots && if exist cypress\\videos rmdir /q /s cypress\\videos",
+    "pretest": "npm run allure:clear",
+    "test": "npm run cy:run || npm run posttest",
+    "posttest": "npm run allure:report"
+  }
+
+STEP 4 Open Allure Report (index.html) using Live Server
+

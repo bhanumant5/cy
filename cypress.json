@@ -1,12 +1,12 @@
 {
   "baseUrl": null,
-  "reporter": "mochawesome",
-  "defaultCommandTimeout": 4000,
-  "chromeWebSecurity": true,
+  "defaultCommandTimeout": 6000,
+  "chromeWebSecurity": false,
   "video": false,
   "screenshotOnRunFailure": false,
-  "integrationFolder": "cypress/integration/DAY_1",
   "includeShadowDom": true,
-  "env": null,
+  "env":{
+    "url": "https://www.amazon.in/"
+  },
   "projectId": "pi3bay"
 }
