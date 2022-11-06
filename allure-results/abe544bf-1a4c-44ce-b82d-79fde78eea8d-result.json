@@ -1,0 +1,1 @@
+{"uuid":"abe544bf-1a4c-44ce-b82d-79fde78eea8d","historyId":"ef7b1c46f7c5a6de40fd6fd218cb4c71","status":"skipped","statusDetails":{"message":"Test ignored"},"stage":"finished","steps":[],"attachments":[],"parameters":[],"labels":[{"name":"suite","value":"Test"}],"links":[],"start":1667574650434,"name":"Test","fullName":"Test","stop":1667574650448}

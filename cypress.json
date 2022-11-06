@@ -1,9 +1,9 @@
 {
-  "baseUrl": null,
-  "defaultCommandTimeout": 6000,
+  "baseUrl": "http://www.webdriveruniversity.com/",
+  "defaultCommandTimeout": 7000,
   "chromeWebSecurity": false,
   "video": false,
-  "screenshotOnRunFailure": false,
+  "screenshotOnRunFailure": true,
   "includeShadowDom": true,
   "env":{
     "url": "https://www.amazon.in/"

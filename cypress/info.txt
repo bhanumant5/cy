@@ -1,2 +1,11 @@
 
 
+// find()
+//eq()
+//first()
+//last()
+//children()
+//pre()
+//next()
+//parent()
+//sibling()

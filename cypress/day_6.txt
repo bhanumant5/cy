@@ -349,7 +349,7 @@ cy.get().click()
 
 // cy.dblclick()===== doubleclick
 
-// .trigger=====handling mouse evenet and drop and drag===={which:2}, {which:2}, {which:3}
+// .trigger=====handling mouse evenet and drop and drag===={which:1}, {which:2}, {which:3}
 
 
 
